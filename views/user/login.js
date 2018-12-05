@@ -29,7 +29,7 @@ class Login {
     if (validated.state) {
       const { username, password } = this.data;
 
-      User.findOne({ where: { username: username } }).then(user => {
+      User.findOne({ where: { user: username } }).then(user => {
         // No record found
         if (user == null) {
            let responseData = JSON.stringify({
@@ -41,7 +41,7 @@ class Login {
         
 
         // Validate password
-        if (password == user.password) {
+        if (password == user.pass) {
 
             let responseData = JSON.stringify({
                 statusMsg: "Login Successful",

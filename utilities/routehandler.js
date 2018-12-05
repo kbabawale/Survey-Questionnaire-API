@@ -7,7 +7,8 @@ class routeHandlers {
          addQuestions3: "/api/deliveryquestions/add",
          getCount: "/api/count/get",
          setCount: "/api/count/set",
-         addUser: "/api/user/add"
+         addUser: "/api/user/add",
+         login: "/api/login"
 
       };
       return JSON.stringify(routeHandler);

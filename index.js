@@ -8,6 +8,7 @@ const AddQuestions3 = require("./views/questions/addQuestions3");
 const GetCount = require("./views/count/get");
 const SetCount = require("./views/count/set");
 const AddUser = require("./views/user/add");
+const Login = require("./views/user/login");
 
 const app = express();
 const dotenv = require("dotenv");
@@ -43,6 +44,10 @@ class SRServer {
        app.post(routes.addQuestions2, (req, res) => {
           new AddQuestions2(req, res);
        });
+
+       app.post(routes.login, (req, res) => {
+         new Login(req, res);
+      });
 
        app.post(routes.addQuestions3, (req, res) => {
         new AddQuestions3(req, res);

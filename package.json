@@ -1,0 +1,42 @@
+{
+  "name": "survey-questionnaire-api",
+  "version": "1.0.0",
+  "description": "Survey Questionnaire API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kbabawale@bitbucket.org/kbabawale/survey-questionnaire-api.git"
+  },
+  "keywords": [
+    "Business",
+    "API",
+    "nodeJS",
+    "Survey"
+  ],
+  "author": "Kolapo Babawale",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/kbabawale/survey-questionnaire-api#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "bluebird": "^3.5.2",
+    "body-parser": "^1.18.3",
+    "cloudinary": "^1.11.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "joi": "^13.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mysql2": "^1.6.1",
+    "node-cache": "^4.2.0",
+    "nodemon": "^1.18.4",
+    "pg": "^7.6.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.39.1",
+    "sequelize-tokenify": "^0.1.8",
+    "socket.io": "^2.1.1",
+    "util": "^0.11.0",
+    "validator": "^10.8.0"
+  }
+}

@@ -1,5 +1,5 @@
 const ResponseObj = require("../../utilities/responsehandler");
-const validatePassword = require("../../utilities/validatePassword");
+//const validatePassword = require("../../utilities/validatePassword");
 let User = require("../../database/users");
 
 class Login {
@@ -38,16 +38,10 @@ class Login {
            return ResponseObj.responseHandlers(400, this.res, responseData);
         }
 
-        // Blocked User
-        if (user.dataValues.active == false) {
-           let responseData = JSON.stringify({
-              statusMsg: "This User Account Has Been Blocked"
-           });
-           return ResponseObj.responseHandlers(400, this.res, responseData);
-        }
+        
 
         // Validate password
-        if (validatePassword(password, user.password)) {
+        if (password == user.password) {
 
             let responseData = JSON.stringify({
                 statusMsg: "Login Successful",

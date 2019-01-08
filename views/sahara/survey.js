@@ -89,7 +89,8 @@ class Add {
             
                let responseData = JSON.stringify({
                   statusMsg: "Survey Answers Successfully Stored",
-                  question: question
+                  question: question,
+                  statusCode: 200
                });
                return ResponseObj.responseHandlers(200, this.res, responseData);
             })
@@ -101,13 +102,15 @@ class Add {
                   message = err;
                }
                let responseData = JSON.stringify({
-                  statusMsg: message
+                  statusMsg: message,
+                  statusCode: 400
                });
                return ResponseObj.responseHandlers(400, this.res, responseData);
             });
       } else {
          let responseData = JSON.stringify({
-            statusMsg: validated.errorMsg
+            statusMsg: validated.errorMsg,
+            statusCode: 400
          });
          return ResponseObj.responseHandlers(400, this.res, responseData);
       }

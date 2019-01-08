@@ -32,7 +32,8 @@ class Login {
         // No record found
         if (user == null) {
            let responseData = JSON.stringify({
-              statusMsg: "Login Failed"
+              statusMsg: "Login Failed",
+              statusCode: 400
            });
            return ResponseObj.responseHandlers(400, this.res, responseData);
         }
@@ -44,7 +45,8 @@ class Login {
 
             let responseData = JSON.stringify({
                 statusMsg: "Login Successful",
-                user: user
+                user: user,
+                statusCode: 200
              });
              return ResponseObj.responseHandlers(
                 200,
@@ -54,14 +56,16 @@ class Login {
         } else {
            // Invalid Password
            let responseData = JSON.stringify({
-              statusMsg: "Login Failed"
+              statusMsg: "Login Failed",
+              statusCode: 400
            });
            return ResponseObj.responseHandlers(400, this.res, responseData);
         }
      });
     }else{
         let responseData = JSON.stringify({
-            statusMsg: validated.errorMsg
+            statusMsg: validated.errorMsg,
+            statusCode: 400
          });
          return ResponseObj.responseHandlers(400, this.res, responseData);
     }

@@ -41,7 +41,7 @@ class Login {
         
 
         // Validate password
-        if (password == user.dataValues.password) {
+        if (password == user.password) {
 
             let responseData = JSON.stringify({
                 statusMsg: "Login Successful",

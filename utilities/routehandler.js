@@ -8,7 +8,9 @@ class routeHandlers {
          getCount: "/api/count/get",
          setCount: "/api/count/set",
          addUser: "/api/user/add",
-         login: "/api/login"
+         login: "/api/login",
+         saharanLogin: "/api/sahara/login",
+         saharanSurvey: "/api/sahara/survey"
 
       };
       return JSON.stringify(routeHandler);

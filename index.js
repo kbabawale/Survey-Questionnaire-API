@@ -9,6 +9,8 @@ const GetCount = require("./views/count/get");
 const SetCount = require("./views/count/set");
 const AddUser = require("./views/user/add");
 const Login = require("./views/user/login");
+const SaharanLogin = require("./views/sahara/login");
+const SaharanSurvey = require("./views/sahara/survey");
 
 const app = express();
 const dotenv = require("dotenv");
@@ -64,6 +66,14 @@ class SRServer {
         app.post(routes.addUser, (req, res) => {
             new AddUser(req, res);
         });
+
+        app.post(routes.saharanLogin, (req, res) => {
+            new SaharanLogin(req, res);
+         });
+
+         app.post(routes.saharanSurvey, (req, res) => {
+            new SaharanSurvey(req, res);
+         });
 
        
     }

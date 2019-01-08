@@ -42,10 +42,11 @@ class Login {
 
         // Validate password
         if (password == user.dataValues.password) {
-
+            fullname = user.dataValues.firstname+' '+user.dataValues.middlename+' '+user.dataValues.lastname;
             let responseData = JSON.stringify({
                 statusMsg: "Login Successful",
-                user: user,
+                id: user.dataValues.id,
+                name: fullname,
                 statusCode: 200
              });
              return ResponseObj.responseHandlers(

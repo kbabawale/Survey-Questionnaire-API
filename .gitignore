@@ -1,3 +1,13 @@
 node_modules/
 .env
 .vscode/
+
+database/
+utilities/syncDB.js
+utilities/validateToken.js
+utilities/validatePassword.js
+utilities/authenticate.js
+
+views/questions/
+views/sahara/
+views/user/login.js

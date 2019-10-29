@@ -31,7 +31,7 @@
     "nodemon": "^1.18.4",
     "pg": "^7.6.1",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^4.39.1",
+    "sequelize": "^5.15.1",
     "sequelize-tokenify": "^0.1.8",
     "socket.io": "^2.1.1",
     "util": "^0.11.0",
